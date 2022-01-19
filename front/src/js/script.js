@@ -15,7 +15,7 @@ function getAllCountries() {
         url: "https://restcountries.com/v3.1/all",
         success: function (data) {
             data.forEach((country) => {
-                $("#country").html(`<li> Country: ${country.name.common} - Capital: ${country.capital} </li>`)
+                $("#country").append(`<li> Country: ${country.name.common} - Capital: ${country.capital} </li>`)
             })
         }
     })
