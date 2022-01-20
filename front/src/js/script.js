@@ -40,6 +40,7 @@ $("select").change(function () {
   $.ajax({
     url: `https://restcountries.com/v3.1/region/${select}`,
     success: function (data) {
+      $("li").remove();
       data.forEach((country) => {
         console.log(select);
         $("#country").append(
