@@ -1,8 +1,9 @@
-html {
-  height: 100%;
+html,
+body {
+  min-height: 100%;
 }
 body {
   background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
   background-repeat: no-repeat;
-  height: 100%;
+  background-size: auto;
 }
