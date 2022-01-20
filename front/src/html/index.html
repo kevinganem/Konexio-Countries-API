@@ -20,23 +20,32 @@
 
             <!-- SEARCH PART -->
 
-            <section class="row col-8 justify-content-center shadow p-3 mb-5 bg-body rounded">
+            <section class="row col-8 justify-content-center shadow p-3 m-5 bg-body rounded">
 
                 <!-- SEARCH BAR & BUTTONS -->
 
-                <div class="d-flex">
-                    <input class="form-control" placeholder="Type the country or capital to get info" />
-                    <button id="btnShowData" class="btn btn-outline-dark ">Show Data</button>
-                    <button id="btnLoading" class="btn btn-outline-dark visually-hidden" type="button" disabled>
-                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                        Loading...
-                    </button>
-                    <button id="btnReset" class="btn btn-outline-dark ">Reset</button>
+                <div class="d-md-flex justify-content-evenly">
+                    <div class="p-1 col-lg-8">
+                        <input class="form-control" placeholder="Type the country or capital to get info" />
+                    </div>
+                    <div class="p-1">
+                        <button id="btnShowData" class="btn btn-outline-dark ">Show Data</button>
+                        <div>
+                            <button id="btnLoading" class="btn btn-outline-dark visually-hidden" type="button" disabled>
+                                <span class="spinner-border spinner-border-sm p-1" role="status"
+                                    aria-hidden="true"></span>
+                                Load...
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-1">
+                        <button id="btnReset" class="btn btn-outline-dark">Reset</button>
+                    </div>
                 </div>
 
                 <!-- RADIO CHECKER -->
-                <div class="d-flex p-2">
-                    <div class="col-5 ps-2 pt-2">
+                <div class="d-sm-flex justify-content-between pt-2">
+                    <div class="col-lg-5 col-md-6 col-sm-8 col-xs-8 ps-2 pt-2">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="search"
                                 value="country">
@@ -66,10 +75,10 @@
 
             <!-- LIST OF ELEMENTS -->
 
-            <div class="col-8 d-flex shadow p-3 mb-5 bg-body rounded">
+            <section class="col-8 d-flex shadow p-3 mb-5 bg-body rounded">
                 <ul id="country">
                 </ul>
-            </div>
+            </section>
 
             <!-- LIST OF ELEMENTS END -->
         </div>

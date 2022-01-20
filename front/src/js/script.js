@@ -7,12 +7,14 @@ $("#btnShowData").click(function () {
   if (country) {
     $("#btnShowData").addClass("visually-hidden");
     $("#btnLoading").removeClass("visually-hidden");
+
     if (search === "country" || !search) {
       $.ajax({
         url: `https://restcountries.com/v3.1/name/${country}`,
         success: function (data) {
           $("#btnShowData").removeClass("visually-hidden");
           $("#btnLoading").addClass("visually-hidden");
+
           data.forEach((country) => {
             $("#country").html(
               `<li> Country: ${country.name.common} - Capital: ${country.capital} </li>`
@@ -26,6 +28,7 @@ $("#btnShowData").click(function () {
         success: function (data) {
           $("#btnShowData").removeClass("visually-hidden");
           $("#btnLoading").addClass("visually-hidden");
+
           data.forEach((country) => {
             $("#country").html(
               `<li> Country: ${country.name.common} - Capital: ${country.capital} </li>`
@@ -50,13 +53,11 @@ $("#btnReset").click(function () {
 $("select").change(function () {
   select = $("select option:selected").val();
 
-  console.log(select);
   $.ajax({
     url: `https://restcountries.com/v3.1/region/${select}`,
     success: function (data) {
       $("li").remove();
       data.forEach((country) => {
-        console.log(select);
         $("#country").append(
           `<li> Country: ${country.name.common} - Capital: ${country.capital} </li>`
         );
@@ -70,12 +71,14 @@ $("select").change(function () {
 function getAllCountries() {
   $("#btnShowData").addClass("visually-hidden");
   $("#btnLoading").removeClass("visually-hidden");
+
   $.ajax({
     url: "https://restcountries.com/v3.1/all",
     success: function (data) {
       $("#btnShowData").removeClass("visually-hidden");
       $("#btnLoading").addClass("visually-hidden");
       $("li").remove();
+
       data.forEach((country) => {
         $("#country").append(
           `<li> Country: ${country.name.common} - Capital: ${country.capital} </li>`
